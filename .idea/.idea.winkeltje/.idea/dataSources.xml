@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="TwinkeltjeDb_EFCodeFirst.db" uuid="dedad0e2-e032-4fd9-bf70-c6443c644d60">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/winkeltje/TwinkeltjeDb_EFCodeFirst.db</jdbc-url>
+    </data-source>
+  </component>
+</project>

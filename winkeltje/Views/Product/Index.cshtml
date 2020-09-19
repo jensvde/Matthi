@@ -1,0 +1,47 @@
+@using Domain
+@model IEnumerable<Domain.Product>
+
+@{
+  int count = 0; 
+  @:<div class="card-deck">
+  foreach (Product product in @Model)
+  {
+    @:<div class="card">
+    @:<img class="card-img-top" src="@Url.Action("getImg", "Product", new {id = product.ProductId})" alt="@product.Naam">
+    @:<div class="card-body">
+    @:<h5 class="card-title">@product.Naam</h5>
+    @:<p class="card-text">@product.Beschrijving</p>
+    @:<p class="card-text">
+    @:<small class="text-muted">Allergenen: 
+    foreach (ProductAllergie allergie in product.ProductAllergies)
+    {
+     // if (allergie.Allergie.Naam.Equals(product.ProductAllergies.Last().Allergie.Naam.ToString()))
+      //{
+      if (allergie != null && allergie.Allergie.Naam != null)
+      {
+        @allergie.Allergie.Naam
+      }
+      //  }
+   // else
+     // {
+       // string showThis = allergie.Allergie.Naam + ", ";
+       // @showThis
+     // }
+    }
+    @:</small>
+    @:</p>
+    @:</div> 
+    @:</div>
+    if (count == 2)
+    {
+      @:</div>
+      @:<br/>
+      @:<div class="card-deck">
+      count = 0; 
+    }
+    else
+    {
+      count++;
+    }
+  }
+}
