@@ -9,7 +9,7 @@ a.navbar-brand {
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+  color: #000000;
 }
 
 .btn-primary {
@@ -68,4 +68,100 @@ body {
   width: 100%;
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
+}
+.dl-lister{
+  display: grid;
+  grid-template: auto / 10em 1fr;
+}
+dl {
+  display: grid;
+  grid-template: auto / 10em 1fr;
+}
+
+dt {
+  background: #fee;
+}
+
+dd {
+  background: hsl(220, 10%, 95%);
+}
+
+.inputdetails{
+  background: transparent;
+  border: none;
+  width: auto;
+}
+
+.dd-dt {
+  margin: 0;
+  padding: .3em .5em;
+  border-top: 1px solid rgba(0,0,0,.1);
+}
+.div-left{
+  width: 45%;
+  float: left;
+  padding: 10px;
+
+}
+.div-right{
+  width: 45%;
+  float: right;
+  padding: 10px;
+}
+.div-container{
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+}
+
+.div-buttons{
+  width:90%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.text-auto-even{
+  color: #000000;
+  text-decoration: none;
+}
+.text-auto-even:hover{
+  color: #000000;
+  text-decoration: none;
+}
+
+.card-title{
+  color: #000000;
+  text-decoration: none;
+}
+.card-title:hover{
+  color: #000000;
+  text-decoration: none;
+}
+
+.card-text{
+  color: #000000;
+  text-decoration: none;
+}
+.card-text:hover{
+  color: #000000;
+  text-decoration: none;
+}
+
+.sortLeft{
+  width: 80%;
+  float: left;
+
+
+}
+.sortRight{
+  width: 30%;
+  float: right;
+
+}
+.sortBar{
+  width: 100%;
+  margin: auto;
+  display: flex;
 }

@@ -9,6 +9,6 @@ namespace Domain
         public int AllergieId { get; set;  }
         public string Naam { get; set; }
         public string Beschrijving { get; set; }
-        public List<ProductAllergie> ProductAllergies { get; set; }
+        public virtual List<ProductAllergie> ProductAllergies { get; set; }
     }
 }

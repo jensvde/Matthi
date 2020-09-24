@@ -12,7 +12,7 @@ namespace DAL.EF
         public ProductRepository()
         {
             ctx = new TwinkeltjeDbContext();
-            TwinkeltjeDbContext.Initialize(ctx, true);
+            TwinkeltjeDbContext.Initialize(ctx, false);
         }
         
         public Product CreateProduct(Product product)
@@ -24,7 +24,7 @@ namespace DAL.EF
 
         public Product ReadProduct(int productId)
         {
-            return ctx.Products.Find(productId);
+            return ctx.Products.Include(u => u.ProductAllergies).Single(x => x.ProductId == productId);
         }
 
         public void UpdateProduct(Product product)
@@ -41,9 +41,24 @@ namespace DAL.EF
 
         public IEnumerable<Product> ReadProducts()
         {
-            return ctx.Products.Include("ProductAllergies").AsEnumerable();
+            return ctx.Products.Include(u => u.ProductAllergies).AsEnumerable();
         }
+        public IEnumerable<Allergie> ReadAllergies()
+        {
+            List<Allergie> allergies = new List<Allergie>();
+            List<string> uniqueAllergies = new List<string>();
 
+                foreach (Allergie readProductProductAllergy in ctx.Allergies.AsEnumerable())
+                {
+                    if (! uniqueAllergies.Contains(readProductProductAllergy.Naam))
+                    {
+                        uniqueAllergies.Add(readProductProductAllergy.Naam);
+                        allergies.Add(readProductProductAllergy);
+                    }
+                }
+
+            return allergies.OrderBy(o => o.Naam);
+        }
         public Allergie CreateAllergie(Allergie allergie)
         {
             ctx.Allergies.Add(allergie);
@@ -66,11 +81,6 @@ namespace DAL.EF
         {
             ctx.Allergies.Update(allergie);
             ctx.SaveChanges();
-        }
-
-        public IEnumerable<Allergie> ReadAllergies()
-        {
-            return ctx.Allergies.AsEnumerable();
         }
     }
 }

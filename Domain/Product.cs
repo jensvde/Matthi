@@ -14,7 +14,7 @@ namespace Domain
         public string Beschrijving { get; set; }
         public byte[] ImageData { get; set; }
         
-        public List<ProductAllergie> ProductAllergies { get; set; }
+        public virtual List<ProductAllergie> ProductAllergies { get; set; }
 
     }
 }

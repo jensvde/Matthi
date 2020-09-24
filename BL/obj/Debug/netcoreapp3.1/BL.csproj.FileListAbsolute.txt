@@ -12,3 +12,17 @@ C:\Users\Administrator\Desktop\test\winkeltje\BL\obj\Debug\netcoreapp3.1\BL.cspr
 C:\Users\Administrator\Desktop\test\winkeltje\BL\obj\Debug\netcoreapp3.1\BL.csproj.CopyComplete
 C:\Users\Administrator\Desktop\test\winkeltje\BL\obj\Debug\netcoreapp3.1\BL.dll
 C:\Users\Administrator\Desktop\test\winkeltje\BL\obj\Debug\netcoreapp3.1\BL.pdb
+E:\Jens\Documents\GitHub\Matthi\BL\bin\Debug\netcoreapp3.1\BL.deps.json
+E:\Jens\Documents\GitHub\Matthi\BL\bin\Debug\netcoreapp3.1\BL.dll
+E:\Jens\Documents\GitHub\Matthi\BL\bin\Debug\netcoreapp3.1\BL.pdb
+E:\Jens\Documents\GitHub\Matthi\BL\bin\Debug\netcoreapp3.1\DAL.dll
+E:\Jens\Documents\GitHub\Matthi\BL\bin\Debug\netcoreapp3.1\Domain.dll
+E:\Jens\Documents\GitHub\Matthi\BL\bin\Debug\netcoreapp3.1\DAL.pdb
+E:\Jens\Documents\GitHub\Matthi\BL\bin\Debug\netcoreapp3.1\Domain.pdb
+E:\Jens\Documents\GitHub\Matthi\BL\obj\Debug\netcoreapp3.1\BL.csprojAssemblyReference.cache
+E:\Jens\Documents\GitHub\Matthi\BL\obj\Debug\netcoreapp3.1\BL.AssemblyInfoInputs.cache
+E:\Jens\Documents\GitHub\Matthi\BL\obj\Debug\netcoreapp3.1\BL.AssemblyInfo.cs
+E:\Jens\Documents\GitHub\Matthi\BL\obj\Debug\netcoreapp3.1\BL.csproj.CoreCompileInputs.cache
+E:\Jens\Documents\GitHub\Matthi\BL\obj\Debug\netcoreapp3.1\BL.csproj.CopyComplete
+E:\Jens\Documents\GitHub\Matthi\BL\obj\Debug\netcoreapp3.1\BL.dll
+E:\Jens\Documents\GitHub\Matthi\BL\obj\Debug\netcoreapp3.1\BL.pdb

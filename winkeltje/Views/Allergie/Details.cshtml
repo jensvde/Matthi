@@ -1,0 +1,17 @@
+@model Domain.Allergie
+
+@{
+    ViewBag.Title = "Details van allergie";
+    Layout = "_Layout";
+}
+
+<h2>@ViewBag.Title @Model.Naam</h2>
+<p>Bekijk de details van een @Model.Naam</p>
+
+    <div class="div-container">
+        <dl class="dl-horizontal">
+            <dt class="dd-dt"><label for="Naam">Naam</label></dt><dd class="dd-dt"><input asp-for="Naam" class="inputdetails"></input></dd>
+            <dt class="dd-dt"> <label for="Beschrijving">Beschrijving</label></dt><dd class="dd-dt"><textarea  asp-for="Beschrijving" cols="40" rows="5" class="inputdetails"></textarea ></dd>
+        </dl>
+    </div>
+    

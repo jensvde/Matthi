@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "baO29/SiteZtdOtBOBFeh5/Izt43FznFCt6qlxE417Uia/376QDOWWGPf8BgiLHaqm+v64mdHJkOj6xRucIg1Q==",
+  "dgSpecHash": "l5iZvgxHuhjm0XKl6cNjtadRCHl1a7GUkATB21HJWJDjWrYDiJOlx3uAeOfAYBRd0698Os7nFxhnEFKuY25f2Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Administrator\\Desktop\\test\\winkeltje\\Domain\\Domain.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "E:\\Jens\\Documents\\GitHub\\Matthi\\Domain\\Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jens\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
   "logs": []
 }

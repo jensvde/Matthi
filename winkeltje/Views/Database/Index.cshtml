@@ -1,0 +1,50 @@
+@model ManagementModel
+
+@{
+    ViewBag.Title = "Database management";
+    Layout = "_Layout";
+}
+
+<h2>@ViewBag.Title</h2>
+<br/>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Alle producten</h2>
+        <a class="btn btn-default" asp-area="" asp-controller="Product" asp-action="IndexAdmin">Ga naar producten</a>
+    </div>
+    <div class="col-md-4">
+        <h2>Product details</h2>
+        <form asp-controller="Product" asp-action="Edit" method="get">
+            <label for="Id">Bekijk de details van een product.</label>
+            <select asp-for="Id" asp-items="Model.ItemsProduct"></select>
+            <input type="submit" value="Ga" class="btn btn-default"/>
+        </form>
+    </div>
+    <div class="col-md-4">
+        <h2>Nieuw product</h2>
+        <a class="btn btn-default" asp-area="" asp-controller="Product" asp-action="New">Maak een nieuw product</a>
+    </div>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Alle allergenen</h2>
+        <a class="btn btn-default" asp-area="" asp-controller="Allergie" asp-action="Index">Ga naar allergenen</a>
+    </div>
+    <div class="col-md-4">
+        <h2>Allergie details</h2>
+        <form asp-controller="Allergie" asp-action="Details" method="post">
+            <label for="Id">Bekijk de details van een allergie.</label><br>
+            <select asp-for="Id" asp-items="Model.Items"></select>
+            <input type="submit" value="Ga" class="btn btn-default"/>
+        </form>
+    </div>
+    <div class="col-md-4">
+        <h2>Nieuwe allergie</h2>
+        <a class="btn btn-default" asp-area="" asp-controller="Allergie" asp-action="New">Maak een nieuwe allergie</a>
+    </div>
+</div>
