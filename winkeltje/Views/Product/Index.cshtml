@@ -5,34 +5,42 @@
 @{
     int id = 1; 
 }
-    <div class="sortLeft">
+    <div class="sortLeft sortBarCheckBoxes">
         <form asp-controller="Product" asp-action="IndexNew" method="post">
                 <table>
                     <tr >
+                        <th>
+                            &nbsp;&nbsp;
+                        </th>
                         @{
                             for (int i = 0; i < @Model.WinkelItems.Count; i++)
                             {
-                                <th><label asp-for="@Model.WinkelItems[i]">@Model.WinkelItems[i].Name</label>&nbsp
-                                    <input type="checkbox" asp-for="@Model.WinkelItems[i].Selected"/>
-                                    <input type="hidden" asp-for="@Model.WinkelItems[i].Id"/>
-                                    <input type="hidden" asp-for="@Model.WinkelItems[i].Name"/>&nbsp &nbsp &nbsp
+                                <th><label asp-for="@Model.WinkelItems[i]">@Model.WinkelItems[i].Name</label>&nbsp;
+                                    <input class="sortBarCheckBoxes" type="checkbox" asp-for="@Model.WinkelItems[i].Selected"/>
+                                    <input class="sortBarCheckBoxes" type="hidden" asp-for="@Model.WinkelItems[i].Id"/>
+                                    <input class="sortBarCheckBoxes" type="hidden" asp-for="@Model.WinkelItems[i].Name"/>
+                                    @if (i < @Model.WinkelItems.Count - 1)
+                                    {
+                                        @:&nbsp; | &nbsp; 
+                                    }
+
                                 </th>
                             }
+
+                            <th>&nbsp;&nbsp;&nbsp;<input type="submit" value="Sorteer" class="btn btn-dark"/></th>
                         }
-                        <th>
-                            <input type="submit" value="Ga" class="btn btn-default"/>
-                        </th>
                     </tr>
                 </table>
             </form>
     </div>
-    <div class="sortRight">
+    <div class="sortRight" class="sortBarCheckBoxes">
         <form asp-controller="Product" asp-action="IndexSearch" method="post">
-        <input asp-for="@Model.SearchString" class="inputdetails"></input>&nbsp;<input type="submit" value="Zoek!" class="btn btn-default"/>
+            <input asp-for="@Model.SearchString" class=""></input>&nbsp;
+            <input type="submit" value="Zoek" class="btn btn-dark"/>
             </form>
     </div>
 </div>
-
+<br/>
 
 @{
     int count = 0; 

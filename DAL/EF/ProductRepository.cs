@@ -27,6 +27,8 @@ namespace DAL.EF
             return ctx.Products.Include(u => u.ProductAllergies).Single(x => x.ProductId == productId);
         }
 
+      
+
         public void UpdateProduct(Product product)
         {
             ctx.Products.Update(product);
@@ -59,6 +61,17 @@ namespace DAL.EF
 
             return allergies.OrderBy(o => o.Naam);
         }
+
+        public IEnumerable<OpeningsUur> ReadOpeningstijden()
+        {
+            return ctx.OpeningsTijden.AsEnumerable();
+        }
+
+        public IEnumerable<Vakantie> ReadVakanties()
+        {
+            return ctx.Vakanties.AsEnumerable();
+        }
+
         public Allergie CreateAllergie(Allergie allergie)
         {
             ctx.Allergies.Add(allergie);

@@ -23,6 +23,16 @@ namespace BL
             return repo.ReadAllergies();
         }
 
+        public IEnumerable<OpeningsUur> GetOpeningstijden()
+        {
+            return repo.ReadOpeningstijden();
+        }
+
+        public IEnumerable<Vakantie> GetVakanties()
+        {
+            return repo.ReadVakanties();
+        }
+
         public Product AddProduct(Product product)
         {
             return repo.CreateProduct(product);

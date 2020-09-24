@@ -122,13 +122,18 @@ dd {
   justify-content: center;
 }
 
-.text-auto-even{
-  color: #000000;
-  text-decoration: none;
+.checkbox{
+  text-align: center;
+  horizontal-align: middle; /* center checkbox vertically */
 }
-.text-auto-even:hover{
-  color: #000000;
-  text-decoration: none;
+
+.text-center-auto{
+  text-align: center;
+  horizontal-align: middle; /* center checkbox vertically */
+}
+
+.text-center-auto:hover{
+  text-align: center;
 }
 
 .card-title{
@@ -156,12 +161,19 @@ dd {
 
 }
 .sortRight{
-  width: 30%;
+  width: 25%;
   float: right;
 
 }
 .sortBar{
   width: 100%;
-  margin: auto;
   display: flex;
+  background: #f1f1f1;
+  border-radius: 50px;
+  /*box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);*/
+  padding: 10px;
+}
+.sortBarCheckBoxes{
+  text-align: center; /* center checkbox horizontally */
+  vertical-align: middle; /* center checkbox vertically */
 }

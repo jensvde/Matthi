@@ -17,5 +17,8 @@ namespace DAL
         void DeleteAllergie(Allergie allergie);
         void UpdateAllergie(Allergie allergie);
         IEnumerable<Allergie> ReadAllergies();
+        IEnumerable<OpeningsUur> ReadOpeningstijden();
+        IEnumerable<Vakantie> ReadVakanties();
+
     }
 }

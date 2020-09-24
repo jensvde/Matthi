@@ -213,3 +213,4 @@ E:\Jens\Documents\GitHub\Matthi\winkeltje\bin\Debug\netcoreapp3.1\Microsoft.Bcl.
 E:\Jens\Documents\GitHub\Matthi\winkeltje\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
 E:\Jens\Documents\GitHub\Matthi\winkeltje\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
 E:\Jens\Documents\GitHub\Matthi\winkeltje\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+E:\Jens\Documents\GitHub\Matthi\winkeltje\obj\Debug\netcoreapp3.1\Razor\Views\Openingsuren\Index.cshtml.g.cs

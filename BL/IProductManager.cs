@@ -7,6 +7,8 @@ namespace BL
     {
         IEnumerable<Product> GetProducts();
         IEnumerable<Allergie> GetAllergies();
+        IEnumerable<OpeningsUur> GetOpeningstijden();
+        IEnumerable<Vakantie> GetVakanties();
         Product AddProduct(Product product);
         Allergie AddAllergie(Allergie allergie);
         Product GetProduct(int productId);

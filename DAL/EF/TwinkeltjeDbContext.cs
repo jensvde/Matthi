@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,12 +15,14 @@ namespace DAL.EF
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Allergie> Allergies { get; set; }
+        public DbSet<OpeningsUur> OpeningsTijden { get; set; }
+        public DbSet<Vakantie> Vakanties { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
           //  optionsBuilder.UseSqlite("Data Source=TwinkeltjeDb_EFCodeFirst1.db")
-          optionsBuilder.UseSqlite("Data Source=TwinkeltjeDb_EFCodeFirst2.db");
-        //optionsBuilder.UseMySql("server=localhost;port=3306;database=db;uid=winkel;password=Winkeltje@1234");
+         // optionsBuilder.UseSqlite("Data Source=TwinkeltjeDb_EFCodeFirst2.db");
+        optionsBuilder.UseMySql("server=localhost;port=3306;database=db;uid=winkel;password=Winkeltje@1234");
             
         }
 
@@ -52,10 +55,94 @@ namespace DAL.EF
                 if (context.Database.EnsureCreated())
                 SeedProducts(context);
                 SeedAllergies(context);
+                SeedOpeneningsTijden(context);
+                SeedVakanties(context);
                 hasRunDuringAppExecution = true;
             }
         }
-
+        private static void SeedTemplate(TwinkeltjeDbContext context)
+        {
+            context.SaveChanges();
+            foreach (EntityEntry entry in context.ChangeTracker.Entries().ToList())
+            {
+                entry.State = EntityState.Detached;
+            }
+        }
+        private static void SeedVakanties(TwinkeltjeDbContext context)
+        {
+            Vakantie vakantie = new Vakantie
+            {
+                startDatum = new DateTime(2020,09,20),
+                eindDatum = new DateTime(2020,10,25),
+                reden = "jaarlijks verlof"
+            };
+            context.Vakanties.Add(vakantie);
+            context.SaveChanges();
+            foreach (EntityEntry entry in context.ChangeTracker.Entries().ToList())
+            {
+                entry.State = EntityState.Detached;
+            }
+        }
+        private static void SeedOpeneningsTijden(TwinkeltjeDbContext context)
+        {
+            List<OpeningsUur> uren = new List<OpeningsUur>();
+            for (int i = 6; i >= 0; i--)
+            {
+                OpeningsUur uur = new OpeningsUur();
+                switch (i)
+                {
+                    case 0: uur.StartVoormiddag = "8.00";
+                        uur.EindVoormiddag = "12.30";
+                        uur.StartNamiddag = "13.00";
+                        uur.EindNamiddag = "18.00";
+                        uur.Dag = "Maandag";
+                        uur.DagVanDeWeek = "Monday";
+                        break;
+                    case 1: uur.SluitingsDag = true;
+                        uur.Dag = "Dinsdag";
+                        uur.DagVanDeWeek = "Tuesday";
+                        break;
+                    case 2: uur.StartVoormiddag = "8.00";
+                        uur.EindVoormiddag = "12.30";
+                        uur.StartNamiddag = "13.00";
+                        uur.EindNamiddag = "18.00";
+                        uur.Dag = "Woensdag";
+                        uur.DagVanDeWeek = "Wednesday";
+                        break;
+                    case 3: uur.StartVoormiddag = "8.00";
+                        uur.EindVoormiddag = "13.00";
+                        uur.SluitingsHalfDag = true;
+                        uur.Dag = "Donderdag";
+                        uur.DagVanDeWeek = "Thursday";
+                        break;
+                    case 4: uur.StartVoormiddag = "8.00";
+                        uur.EindVoormiddag = "12.30";
+                        uur.StartNamiddag = "13.00";
+                        uur.EindNamiddag = "18.00";
+                        uur.Dag = "Vrijdag";
+                        uur.DagVanDeWeek = "Friday";
+                        break;
+                    case 5: uur.StartVoormiddag = "8.00";
+                        uur.EindNamiddag = "17.00";
+                        uur.Dag = "Zaterdag";
+                        uur.DagVanDeWeek = "Saturday";
+                        break;
+                    case 6: uur.StartVoormiddag = "8.00";
+                        uur.EindVoormiddag = "13.00";
+                        uur.SluitingsHalfDag = true;
+                        uur.Dag = "Zondag";
+                        uur.DagVanDeWeek = "Sunday";
+                        break;
+                }
+                uren.Add(uur);
+            }
+            context.OpeningsTijden.AddRange(uren);
+            context.SaveChanges();
+            foreach (EntityEntry entry in context.ChangeTracker.Entries().ToList())
+            {
+                entry.State = EntityState.Detached;
+            }
+        }
         private static void SeedAllergies(TwinkeltjeDbContext context)
         {
             
