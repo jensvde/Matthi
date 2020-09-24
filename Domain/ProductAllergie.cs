@@ -4,7 +4,6 @@ namespace Domain
     {
         public int ProductId { get; set; }
         public int AllergieId { get; set; }
-        public string Naam { get; set; }
         public Allergie Allergie { get; set;  }
         public Product Product { get; set; }
     }

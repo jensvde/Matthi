@@ -91,7 +91,7 @@ namespace winkeltje.Controllers
                             {
                                 foreach (Product product in _manager.GetProducts().ToList())
                                 {
-                                    if (product.ProductAllergies.Find(x => x.Naam == modelIndexWinkelItem) != null)
+                                    if (product.ProductAllergies.Find(x => x.Allergie.Naam == modelIndexWinkelItem) != null)
                                     {
                                         products.Add(product);
                                     }
@@ -195,7 +195,7 @@ namespace winkeltje.Controllers
                             {
                                 foreach (Product product in _manager.GetProducts().ToList())
                                 {
-                                    if (product.ProductAllergies.Find(x => x.Naam == modelIndexWinkelItem) != null)
+                                    if (product.ProductAllergies.Find(x => x.Allergie.Naam == modelIndexWinkelItem) != null)
                                     {
                                         products.Add(product);
                                     }
@@ -353,7 +353,6 @@ namespace winkeltje.Controllers
                         productAllergies.Add(new ProductAllergie
                         {
                             Product = model.Product,
-                            Naam = item.Name,
                             Allergie = _manager.GetAllergie(item.Id)
                         });
                     }
@@ -383,7 +382,7 @@ namespace winkeltje.Controllers
                 bool selected = false;
                 foreach (ProductAllergie productAllergie in model.Product.ProductAllergies)
                 {
-                    if (productAllergie.Naam.Equals(allergie.Naam))
+                    if (productAllergie.Allergie.Naam.Equals(allergie.Naam))
                     {
                         selected = true;
                     }
@@ -431,7 +430,6 @@ namespace winkeltje.Controllers
                         productAllergies.Add(new ProductAllergie
                         {
                             Product = model.Product,
-                            Naam = item.Name,
                             Allergie = _manager.GetAllergie(item.Id)
                         });
                     }
@@ -467,7 +465,7 @@ namespace winkeltje.Controllers
                 bool selected = false;
                 foreach (ProductAllergie productAllergie in model.Product.ProductAllergies)
                 {
-                    if (productAllergie.Naam.Equals(allergie.Naam))
+                    if (productAllergie.Allergie.Naam.Equals(allergie.Naam))
                     {
                         selected = true;
                     }

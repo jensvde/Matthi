@@ -7,5 +7,11 @@
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/winkeltje/TwinkeltjeDb_EFCodeFirst.db</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="TwinkeltjeDb_EFCodeFirst2.db" uuid="1cf70c41-ab95-4e9b-978e-2d7fa948399c">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/winkeltje/TwinkeltjeDb_EFCodeFirst2.db</jdbc-url>
+    </data-source>
   </component>
 </project>

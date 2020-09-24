@@ -51,14 +51,14 @@
             string showThis = "";
             foreach (ProductAllergie allergie in product.ProductAllergies)
             {
-                if (!allergie.Naam.Equals(product.ProductAllergies.Last().Naam))
+                if (!allergie.Allergie.Naam.Equals(product.ProductAllergies.Last().Allergie.Naam))
                 {
-                    showThis = allergie.Naam + ", ";
+                    showThis = allergie.Allergie.Naam + ", ";
                     @showThis
                 }
                 else
                 {
-                    showThis = allergie.Naam;
+                    showThis = allergie.Allergie.Naam;
                     @showThis
                 }
             }

@@ -1,0 +1,14 @@
+E:\Jens\Documents\GitHub\Matthi\BL\bin\Debug\netstandard2.0\BL.deps.json
+E:\Jens\Documents\GitHub\Matthi\BL\bin\Debug\netstandard2.0\BL.dll
+E:\Jens\Documents\GitHub\Matthi\BL\bin\Debug\netstandard2.0\BL.pdb
+E:\Jens\Documents\GitHub\Matthi\BL\bin\Debug\netstandard2.0\DAL.dll
+E:\Jens\Documents\GitHub\Matthi\BL\bin\Debug\netstandard2.0\Domain.dll
+E:\Jens\Documents\GitHub\Matthi\BL\bin\Debug\netstandard2.0\DAL.pdb
+E:\Jens\Documents\GitHub\Matthi\BL\bin\Debug\netstandard2.0\Domain.pdb
+E:\Jens\Documents\GitHub\Matthi\BL\obj\Debug\netstandard2.0\BL.csprojAssemblyReference.cache
+E:\Jens\Documents\GitHub\Matthi\BL\obj\Debug\netstandard2.0\BL.AssemblyInfoInputs.cache
+E:\Jens\Documents\GitHub\Matthi\BL\obj\Debug\netstandard2.0\BL.AssemblyInfo.cs
+E:\Jens\Documents\GitHub\Matthi\BL\obj\Debug\netstandard2.0\BL.csproj.CoreCompileInputs.cache
+E:\Jens\Documents\GitHub\Matthi\BL\obj\Debug\netstandard2.0\BL.csproj.CopyComplete
+E:\Jens\Documents\GitHub\Matthi\BL\obj\Debug\netstandard2.0\BL.dll
+E:\Jens\Documents\GitHub\Matthi\BL\obj\Debug\netstandard2.0\BL.pdb

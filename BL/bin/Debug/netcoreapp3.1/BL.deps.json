@@ -15,6 +15,7 @@
           "BL.dll": {}
         }
       },
+      "Microsoft.CSharp/4.5.0": {},
       "Microsoft.Data.Sqlite.Core/5.0.0-rc.1.20451.13": {
         "dependencies": {
           "SQLitePCLRaw.core": "2.0.3"
@@ -217,6 +218,47 @@
           }
         }
       },
+      "MySqlConnector/0.69.9": {
+        "runtime": {
+          "lib/netcoreapp3.0/MySqlConnector.dll": {
+            "assemblyVersion": "0.69.9.0",
+            "fileVersion": "0.69.9.0"
+          }
+        }
+      },
+      "Newtonsoft.Json/11.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.2.21924"
+          }
+        }
+      },
+      "Pomelo.EntityFrameworkCore.MySql/3.2.1": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.0-rc.1.20451.13",
+          "MySqlConnector": "0.69.9",
+          "Pomelo.JsonObject": "2.2.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Pomelo.EntityFrameworkCore.MySql.dll": {
+            "assemblyVersion": "3.2.1.0",
+            "fileVersion": "3.2.1.0"
+          }
+        }
+      },
+      "Pomelo.JsonObject/2.2.1": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Pomelo.JsonObject.dll": {
+            "assemblyVersion": "2.2.1.0",
+            "fileVersion": "2.2.1.0"
+          }
+        }
+      },
       "SQLitePCLRaw.bundle_e_sqlite3/2.0.3": {
         "dependencies": {
           "SQLitePCLRaw.core": "2.0.3",
@@ -366,7 +408,8 @@
           "Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.0-rc.1.20451.13",
           "Microsoft.EntityFrameworkCore.Sqlite": "5.0.0-rc.1.20451.13",
-          "Microsoft.Extensions.Logging.Debug": "5.0.0-rc.1.20451.14"
+          "Microsoft.Extensions.Logging.Debug": "5.0.0-rc.1.20451.14",
+          "Pomelo.EntityFrameworkCore.MySql": "3.2.1"
         },
         "runtime": {
           "DAL.dll": {}
@@ -384,6 +427,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.CSharp/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+      "path": "microsoft.csharp/4.5.0",
+      "hashPath": "microsoft.csharp.4.5.0.nupkg.sha512"
     },
     "Microsoft.Data.Sqlite.Core/5.0.0-rc.1.20451.13": {
       "type": "package",
@@ -517,6 +567,34 @@
       "sha512": "sha512-QtJLEUrThdc8O0xuYtvfc3XdS17Ji9PKHgtAsZmFtvgNsgGB2hMytqubmT4oMxQi8K31//0U4FCnun1V/mannA==",
       "path": "microsoft.extensions.primitives/5.0.0-rc.1.20451.14",
       "hashPath": "microsoft.extensions.primitives.5.0.0-rc.1.20451.14.nupkg.sha512"
+    },
+    "MySqlConnector/0.69.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WpY4jWc5ee5kgKy3XAK9JMjRmn7+jLYCgDlYvFK+GTrzaiWDWoYLbtJge6l1tqo2teUAP3kzzsJpP8QwJM1W4Q==",
+      "path": "mysqlconnector/0.69.9",
+      "hashPath": "mysqlconnector.0.69.9.nupkg.sha512"
+    },
+    "Newtonsoft.Json/11.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+      "path": "newtonsoft.json/11.0.2",
+      "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
+    },
+    "Pomelo.EntityFrameworkCore.MySql/3.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gM8s6rckXRp3uknTS6WVTYJI4byn+DWc9BsOTN5zTbksw/WB4RFcN+NSlWoTI4/1GGxSy7paoFq/99jq5wUNFQ==",
+      "path": "pomelo.entityframeworkcore.mysql/3.2.1",
+      "hashPath": "pomelo.entityframeworkcore.mysql.3.2.1.nupkg.sha512"
+    },
+    "Pomelo.JsonObject/2.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VHPk3Yf7nDt+tZMC1M4oAoc3bgTYsOrap3VTjn//vd91b/nfquAbAeq1k0Lf7mPt8J7imLd9Pbzm50uB5euuZA==",
+      "path": "pomelo.jsonobject/2.2.1",
+      "hashPath": "pomelo.jsonobject.2.2.1.nupkg.sha512"
     },
     "SQLitePCLRaw.bundle_e_sqlite3/2.0.3": {
       "type": "package",

@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <TargetFramework>netstandard2.0</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>
@@ -9,9 +9,10 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.0-rc.1.20451.13" />
-      <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.0-rc.1.20451.13" />
-      <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="5.0.0-rc.1.20451.14" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.8" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.8" />
+      <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.8" />
+      <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.2.1" />
     </ItemGroup>
 
 </Project>
