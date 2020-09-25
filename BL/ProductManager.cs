@@ -72,5 +72,45 @@ namespace BL
         {
             repo.DeleteAllergie(allergie);
         }
+
+        public OpeningsUur AddOpeningsUur(OpeningsUur openingsUur)
+        {
+            return repo.CreateOpeningsuur(openingsUur);
+        }
+
+        public OpeningsUur GetOpeningsUur(int openingsUurId)
+        {
+            return repo.ReadOpeningsUur(openingsUurId);
+        }
+
+        public void ChangeOpeningsUur(OpeningsUur openingsUur)
+        {
+            repo.UpdateOpeningsuur(openingsUur);
+        }
+
+        public void DeleteOpeningsUur(OpeningsUur openingsUur)
+        {
+            repo.DeleteOpeningsuur(openingsUur);
+        }
+
+        public Vakantie AddVakantie(Vakantie vakantie)
+        {
+            return repo.CreateVakantie(vakantie);
+        }
+
+        public Vakantie GetVakantie(int vakantieId)
+        {
+            return repo.ReadVakantie(vakantieId);
+        }
+
+        public void ChangeVakantie(Vakantie vakantie)
+        {
+            repo.UpdateVakantie(vakantie);
+        }
+
+        public void DeleteVakantie(Vakantie vakantie)
+        {
+            repo.DeleteVakantie(vakantie);
+        }
     }
 }

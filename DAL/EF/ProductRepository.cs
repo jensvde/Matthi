@@ -72,6 +72,54 @@ namespace DAL.EF
             return ctx.Vakanties.AsEnumerable();
         }
 
+        public OpeningsUur CreateOpeningsuur(OpeningsUur openingsUur)
+        {
+            ctx.OpeningsTijden.Add(openingsUur);
+            ctx.SaveChanges();
+            return openingsUur;
+        }
+
+        public OpeningsUur ReadOpeningsUur(int openingsuurId)
+        {
+            return ctx.OpeningsTijden.Find(openingsuurId);
+        }
+
+        public void UpdateOpeningsuur(OpeningsUur openingsUur)
+        {
+            ctx.OpeningsTijden.Update(openingsUur);
+            ctx.SaveChanges();
+        }
+
+        public void DeleteOpeningsuur(OpeningsUur openingsUur)
+        {
+            ctx.OpeningsTijden.Remove(openingsUur);
+            ctx.SaveChanges();
+        }
+
+        public Vakantie CreateVakantie(Vakantie vakantie)
+        {
+            ctx.Vakanties.Add(vakantie);
+            ctx.SaveChanges();
+            return vakantie;
+        }
+
+        public Vakantie ReadVakantie(int vakantieId)
+        {
+            return ctx.Vakanties.Find(vakantieId);
+        }
+
+        public void UpdateVakantie(Vakantie vakantie)
+        {
+            ctx.Vakanties.Update(vakantie);
+            ctx.SaveChanges();
+        }
+
+        public void DeleteVakantie(Vakantie vakantie)
+        {
+            ctx.Vakanties.Remove(vakantie);
+            ctx.SaveChanges();
+        }
+
         public Allergie CreateAllergie(Allergie allergie)
         {
             ctx.Allergies.Add(allergie);

@@ -19,6 +19,14 @@ namespace DAL
         IEnumerable<Allergie> ReadAllergies();
         IEnumerable<OpeningsUur> ReadOpeningstijden();
         IEnumerable<Vakantie> ReadVakanties();
+        OpeningsUur CreateOpeningsuur(OpeningsUur openingsUur);
+        OpeningsUur ReadOpeningsUur(int openingsuurId);
+        void UpdateOpeningsuur(OpeningsUur openingsUur);
+        void DeleteOpeningsuur(OpeningsUur openingsUur);
 
+        Vakantie CreateVakantie(Vakantie vakantie);
+        Vakantie ReadVakantie(int vakantieId);
+        void UpdateVakantie(Vakantie vakantie);
+        void DeleteVakantie(Vakantie vakantie);
     }
 }

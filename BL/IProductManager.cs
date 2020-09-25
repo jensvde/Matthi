@@ -17,5 +17,16 @@ namespace BL
         void ChangeAllergie(Allergie allergie);
         void DeleteProduct(Product product);
         void DeleteAllergie(Allergie allergie);
+        
+        OpeningsUur AddOpeningsUur(OpeningsUur openingsUur);
+        OpeningsUur GetOpeningsUur(int openingsUurId);
+        void ChangeOpeningsUur(OpeningsUur openingsUur);
+        void DeleteOpeningsUur(OpeningsUur openingsUur);
+        
+        Vakantie AddVakantie(Vakantie vakantie);
+        Vakantie GetVakantie(int vakantieId);
+        void ChangeVakantie(Vakantie vakantie);
+        void DeleteVakantie(Vakantie vakantie);
+        
     }
 }
