@@ -177,3 +177,6 @@ dd {
   text-align: center; /* center checkbox horizontally */
   vertical-align: middle; /* center checkbox vertically */
 }
+.card{
+  max-width: 350px;
+}

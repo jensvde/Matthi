@@ -51,10 +51,10 @@
     foreach (Product product in @Model.Products)
     {
         @:<div class="card">
-        <a class="text-auto-even" asp-area="" asp-controller="Product" asp-action="Details" asp-route-id="@product.ProductId"><img class="card-img-top"  src="@Url.Action("getImg", "Product", new {id = product.ProductId})" alt="@product.Naam" ></a>
+        <img class="card-img-top"  src="@Url.Action("getImg", "Product", new {id = product.ProductId})" alt="@product.Naam" >
         @:<div class="card-body">
-        <a class="text-auto-even" asp-area="" asp-controller="Product" asp-action="Details" asp-route-id="@product.ProductId"><h5 class="card-title">@product.Naam</h5></a>
-        <a class="text-auto-even" asp-area="" asp-controller="Product" asp-action="Details" asp-route-id="@product.ProductId"><p class="card-text">@product.Beschrijving</p></a>
+        <h5 class="card-title">@product.Naam</h5>
+        <p class="card-text">@product.Beschrijving</p>
         @:<p class="card-text">
         if (product.ProductAllergies.Count > 0)
         {
